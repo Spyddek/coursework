@@ -5,6 +5,11 @@
     list-style: none;
     text-decoration: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+}
 
 header {
     display: flex;
@@ -17,11 +22,10 @@ header ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;               /* делаем сами списки флексами */
-    gap: 15px;                   /* расстояние между пунктами */
+    display: flex;
+    gap: 15px;
 }
 
-/* Стили для ссылок (необязательно) */
 header a {
     text-decoration: none;
     color: #333;
@@ -41,5 +45,246 @@ header a {
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-beginning {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1162px;
+    max-height: 472.26px;
+}
+
+.flex-my-teacher {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+}
+
+.flex-my-teacher button {
+    width: 314px;
+    height: 59.26px;
+    background: linear-gradient(91.67deg, rgba(20, 81, 154, 0.9) 5.42%, rgba(7, 27, 52, 0.9) 85.9%);
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 10px 10px 4px 0px #00000040;
+    cursor: pointer;
+}
+
+.flex-my-teacher p {
+    max-width: 447px;
+    max-height: 125.22px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.flex-my-teacher h2 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.flex-my-logo {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.blue-block {
+    background: #14519A;
+}
+
+.services {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #ffffff;
+    margin: 0 0 40px 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background:white;
+    width: 572px;
+    height: 556.78px;
+    padding: 80px 85px 30px 85px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3{
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card p{
+    margin: 0 0 40px 0;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.btn{
+    margin-top: auto;
+    align-self: center; 
+    display: inline-block;
+    padding: 12px 30px;
+    background: #14519AE5;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    width: 314px;
+    height: 66.16px;
+    cursor: pointer;
+}
+
+.blue-block-2 {
+    background: #14519A2E;
+}
+
+.reviews {
+    margin: 0px auto;
+    padding: 20px 20px;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.reviews h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #14519A;
+    margin-bottom: 30px;
+}
+
+.reviews__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    background: #14519A5C;
+    padding: 20px;
+    width: 375px;
+    height: 569px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.review-card__footer {
+    border-top: 3px solid #14519A;
+    padding-top: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.faq {
+    max-width: 1165px;
+    margin: 20px auto;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.item {
+    box-shadow: 10px 10px 10px 10px #00000040;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.item input {
+    display: none;
+}
+
+.item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: 500;
+    color: #222;
+}
+
+.item .icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.item .answer {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555;
+}
+
+.item input:checked ~ .answer {
+    max-height: 200px;
+    padding: 10px 20px;
+}
+
+.item input:checked + label .icon {
+    transform: rotate(45deg);
+}
+
+footer {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
