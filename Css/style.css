@@ -7,6 +7,19 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@keyframes button-shaking {
+    0%   { transform: translateX(0); }
+    /* фаза тряски (примерные ключевые точки) */
+    5%   { transform: translateX(-5px) rotate(-2deg); }
+    10%  { transform: translateX(5px)  rotate(2deg); }
+    15%  { transform: translateX(-5px) rotate(-1deg); }
+    20%  { transform: translateX(5px)  rotate(1deg); }
+    25%  { transform: translateX(-3px) rotate(-0.5deg); }
+    28.57% { transform: translateX(0) rotate(0); }
+    /* оставшееся время – покой */
+    100% { transform: translateX(0) rotate(0); }
+}
+
 body {
     font-family: "Inter", sans-serif;
 }
@@ -33,12 +46,6 @@ header a {
     display: block;
     color: #14519AB2;
     font-weight: 700;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .header_menu {
@@ -73,6 +80,7 @@ header a {
     font-weight: 700;
     box-shadow: 10px 10px 4px 0px #00000040;
     cursor: pointer;
+    animation: button-shaking 7s ease-in-out infinite;
 }
 
 .flex-my-teacher p {
@@ -145,7 +153,8 @@ header a {
     align-self: center; 
     display: inline-block;
     padding: 12px 30px;
-    background: #14519AE5;
+    background: linear-gradient(91.67deg, rgba(20, 81, 154, 0.9) 5.42%, rgba(7, 27, 52, 0.9) 85.9%);
+    box-shadow: 10px 10px 4px 0px #00000040;
     color: white;
     font-size: 32px;
     font-weight: 700;
@@ -240,7 +249,7 @@ header a {
 }
 
 .item .icon {
-    font-size: 20px;
+    font-size: 45px;
     transition: transform 0.3s;
 }
 
@@ -249,8 +258,8 @@ header a {
     padding: 0 20px;
     overflow: hidden;
     transition: max-height 0.3s, padding 0.3s;
-    font-size: 15px;
-    line-height: 1.4;
+    font-size: 24px;
+    font-weight: 500;
     color: #555;
 }
 
@@ -263,11 +272,6 @@ header a {
     transform: rotate(45deg);
 }
 
-footer {
-    background: #f1f1f1;
-    padding: 20px;
-}
-
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -277,14 +281,21 @@ footer {
 }
 
 footer {
-    background: #f1f1f1;
-    padding: 20px;
-}
-
-.footer-container {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    background: #f1f1f1;
+    padding: 20px;
     justify-content: space-between;
-    align-items: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contacts span {
+    font-size: 24px;
+    font-weight: 500;
 }
