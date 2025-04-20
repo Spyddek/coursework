@@ -71,6 +71,10 @@ header a {
     text-align: left;
 }
 
+.flex-my-teacher span {
+    color: #14519A;
+}
+
 .flex-my-teacher button {
     width: 314px;
     height: 59.26px;
